@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>선택자</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        <script>
+            $(function(){
+                $('input:text').css('background','tomato');
+                $('input:button').attr('value','왕버튼').css('width','200px').css('height','50px');
+                $('input:checkbox').attr('checked',true).css({'width':'200px','height':'50px'});
+                $('input:file').css('background','yellowgreen')
+                $('input:image').mouseenter(function(){
+                    $(this).attr('src','../images/KH_top_logo.jpg');
+                });
+                $('input:image').mouseout(function(){
+                    $(this).attr('src','../images/iconsample.PNG');
+                });
+                $('input:password').css('background','yellow');
+                $('input:radio').attr('checked',true);
+                $('input:reset').css({'background':'skyblue','color':'white'});
+                $('input:submit').css({'background':'violet','color':'white'}).attr('value','전송');
+            });
+        </script>
+    </head>
+    <body>
+        <h1>입력 양식 필터 선택자</h1>
+        <p>input 태그의 type 속성에 따라 문서 객체 선택</p>
+        <hr>
+        <label>텍스트 상자 : </label><input type="text"><br>
+        <label>버튼 상자 : </label><input type="button"><br>
+        <label>체크박스 : </label><input type="checkbox"><br>
+        <label>파일 : </label><input type="file"><br>
+        <label>이미지 : </label><input type="image" src="../images/iconsample.PNG"><br>
+        <label>패스워드 상자 : </label><input type="password"><br>
+        <label>라디오 버튼 : </label><input type="radio"><br>
+        <label>리셋 버튼 : </label><input type="reset"><br>
+        <label>submit 상자 : </label><input type="submit"><br>
+
+    </body>
+</html>
